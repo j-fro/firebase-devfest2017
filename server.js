@@ -12,7 +12,7 @@ const serviceAccount = require(
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    databaseURL: 'https://devfest2017-eeab3.firebaseio.com/'
+    databaseURL: process.env.FIREBASE_URL
 });
 
 let app = express();
